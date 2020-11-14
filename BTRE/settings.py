@@ -170,3 +170,8 @@ EMAIL_HOST_USER = 'btrealestate123@gmail.com'
 EMAIL_HOST_PASSWORD = 'xuciejofhsxqqvzh'
 EMAIL_USE_TLS = True
 
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
