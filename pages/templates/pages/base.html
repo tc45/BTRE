@@ -1,10 +1,35 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+
+    <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'pages/css/all.css' %}">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'pages/css/bootstrap.css' %}">
+  <!-- Custom -->
+  <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="{% static 'pages/css/lightbox.min.css' %}">
+
+    <title>BT Real Estate{% block title %}{% endblock %}</title>
 </head>
 <body>
-$END$
+    <!-- Top Bar -->
+    {% include 'partials/_topbar.html' %}
+    <!-- Nav Bar -->
+    {% include 'partials/_navbar.html' %}
+    <!-- Main Content -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Main Content -->
+    {% include 'partials/_footer.html' %}
+  <script src="{% static 'pages/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'pages/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'pages/js/lightbox.min.js' %}"></script>
+  <script src="{% static 'pages/js/main.js' %}"></script>
+
 </body>
 </html>
